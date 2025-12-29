@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Jordi ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --primary: #d4a5a5; --bg: #f9f7f2; --text: #4a4a4a; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; overflow-x: hidden; }
+        
+        /* Reproductor de Música Flotante */
+        .music-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--primary);
+        }
+        .music-container span { font-size: 0.8rem; margin-right: 10px; font-weight: 500; color: var(--primary); }
+        audio { height: 30px; width: 200px; }
+
+        /* Portada */
+        header {
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('portada.jpg'); 
+            background-size: cover; background-attachment: fixed; color: white;
+        }
+        h1 { font-family: 'Dancing Script', cursive; font-size: 3.5rem; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        
+        /* Contenedor */
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        
+        /* Textos */
+        .chapter-title { text-align: center; margin: 80px 0 40px; opacity: 0; transform: translateY(20px); transition: 1s; }
+        .chapter-title h2 { font-family: 'Dancing Script', cursive; font-size: 2.8rem; color: var(--primary); margin-bottom: 10px; }
+        
+        /* Fotos */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 50px; }
+        .polaroid {
+            background: white; padding: 12px 12px 45px 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s; opacity: 0; transform: translateY(40px);
+        }
+        .polaroid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        
+        /* Carta Final */
+        .letter { background: white; padding: 40px; border: 2px dashed var(--primary); margin-top: 60px; line-height: 1.8; opacity: 0; transition: 1.5s; }
+        
+        /* Animación */
+        .visible { opacity: 1 !important; transform: rotate(0deg) translateY(0) !important; }
+        .polaroid.visible:nth-child(odd) { transform: rotate(-2deg) translateY(0) !important; }
+        .polaroid.visible:nth-child(even) { transform: rotate(2deg) translateY(0) !important; }
+    </style>
+</head>
+<body>
+
+    <div class="music-container">
+        <span>🎵</span>
+        <audio id="player" controls loop>
+            <source src="cancion.mp3" type="audio/mpeg">
+            Tu navegador no soporta el audio.
+        </audio>
+    </div>
+
+    <header>
+        <h1>Nuestra Historia</h1>
+        <p>Momentos Inolvidables</p>
+    </header>
+
+    <div class="container">
+        <div class="chapter-title">
+            <h2>Cómo empezó todo</h2>
+            <p>Donde la magia comenzó...</p>
+        </div>
+        <div class="gallery">
+            <div class="polaroid"><img src="1.jpg"></div>
+            <div class="polaroid"><img src="2.jpg"></div>
+            <div class="polaroid"><img src="3.jpg"></div>
+            <div class="polaroid"><img src="4.jpg"></div>
+            <div class="polaroid"><img src="5.jpg"></div>
+            <div class="polaroid"><img src="6.jpg"></div>
+            <div class="polaroid"><img src="7.jpg"></div>
+            <div class="polaroid"><img src="8.jpg"></div>
+        </div>
+
+        <div class="chapter-title">
+            <h2>Cómplices de Locuras</h2>
+            <p>Risas que guardaré para siempre.</p>
+        </div>
+        <div class="gallery">
+            <script>
+                for(let i=9; i<=25; i++) {
+                    document.write(`<div class="polaroid"><img src="${i}.jpg"></div>`);
+                }
+            </script>
+        </div>
+
+        <div class="chapter-title">
+            <h2>Siempre Juntos</h2>
+            <p>Gracias por estar en cada paso.</p>
+        </div>
+        <div class="gallery">
+            <script>
+                for(let i=26; i<=38; i++) {
+                    document.write(`<div class="polaroid"><img src="${i}.jpeg"></div>`);
+                }
+            </script>
+        </div>
+
+        <div class="chapter-title">
+            <h2>Próxima Parada...</h2>
+            <p>La distancia solo es física.</p>
+        </div>
+        <div class="gallery">
+            <script>
+                for(let i=39; i<=45; i++) {
+                    document.write(`<div class="polaroid"><img src="${i}.jpeg"></div>`);
+                }
+            </script>
+        </div>
+
+        <div class="letter">
+            <h3>Para Jordi,</h3>
+            <p>No podía quedarme de brazos cruzados ni dejar que te fueras sin dejarte algo que te recuerde a mí. Este detalle nació de esa sensación de “no puedo no hacerlo”.
+
+A lo largo de todos estos años compartimos de todo: momentos tristes, charlas profundas, anécdotas, chismes interminables… pero, por sobre todo, risas que nunca faltaron. Sos una de esas personas con las que el tiempo se disfruta de verdad, alguien con quien estar siempre se siente bien.
+
+Daría lo que fuera para que no te vayas, pero así es la vida, llena de cambios y nuevos caminos. Quería que supieras —y recordártelo siempre— que fuiste y seguís siendo la mejor amiga que tengo, mi lugar seguro, mi persona de confianza y alguien a quien amo con todo el corazón.
+
+Siempre vas a tener un pedacito de mí acompañándote. Te deseo todo lo más lindo del mundo y acá voy a estar, siempre. Los kilómetros son solo números cuando la amistad es tan fuerte. Te amo. 🤍</p>
+            <p style="text-align: right; font-weight: bold;">- Luki Mufasa</p>
+        </div>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.chapter-title, .polaroid, .letter').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
